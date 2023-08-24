@@ -7,9 +7,9 @@ A tools to generate character based on https://limezu.itch.io/moderninteriors as
 
 ## Instructions 
 
-1. Ensure generator.html is located in Modern_Interiors/2_Characters folder
-2. Open Generator.html
-3. Click Choose files to import the assets
+1. Copy the Modern_Interiors/2_Characters/Character_Generator folder to this directory
+2. Open generator.html
+3. Click Choose files to import Character_Generator
 4. Voila!
 
 [Video Demo](https://youtu.be/_nkbxQ6HYCY)
@@ -25,9 +25,9 @@ A tools to generate portraits based on https://limezu.itch.io/modernuserinterfac
 
 ## Instructions 
 
-1. Ensure portrait_generator.html is located in Modern_UI/48x48 folder
+1. Copy the Modern_UI folder to this directory
 2. Open portrait_generator.html
-3. Click Choose files to import Portrait_Generator_48x48
+3. Click Choose files to import Modern_UI
 4. Voila!
 
 

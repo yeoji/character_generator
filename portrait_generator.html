@@ -8,9 +8,9 @@
 
 <details>
     <summary>Instructions:</summary>
-    <p>1. Ensure portrait_generator.html is located in 48x48 folder</p>
+    <p>1. Ensure portrait_generator.html is located in the same folder as Modern_UI</p>
     <p>2. Open portrait_generator.html</p>
-    <p>3. Click Choose files to import Portrait_Generator_48x48 assets</p>
+    <p>3. Click Choose files to import Modern_UI assets</p>
     <p>4. Voila!</p>
 </details>
 <br/>
@@ -91,17 +91,23 @@
     function composeResource(file) {
         var path = file.path.split("/");
 
-        switch (path[1]) {
-            case "Hairstyles_48x48":
+        var size = path[1];
+
+        switch (path[3]) {
+            case `Hairstyles`:
+            case `Hairstyles_${size}`:
                 generateResource(hair, path, file);
                 break;
-            case "Skins_48x48":
+            case `Skins`:
+            case `Skins_${size}`:
                 generateResource(skins, path, file);
                 break;
-            case "Eyes_48x48":
+            case `Eyes`:
+            case `Eyes_${size}`:
                 generateResource(eyes, path, file);
                 break;
-            case "Accessories_48x48":
+            case `Accessories`:
+            case `Accessories_${size}`:
                 generateResource(accessories, path, file);
                 break;
 
@@ -207,7 +213,17 @@
     }
 
     function generateResource(arr, path, file) {
-        arr[2].push(file);
+      switch (path[1]) {
+        case "16x16":
+            arr[0].push(file);
+            break;
+        case "32x32":
+            arr[1].push(file);
+            break;
+        case "48x48":
+            arr[2].push(file);
+            break;
+      }
     }
 
     function draw() {
